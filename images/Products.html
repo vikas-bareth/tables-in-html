@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+           
+        }
+        table{
+            width: 70vw;
+            
+        }
+       
+        img{
+            width: 50px;
+            transition: 250ms;
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+        tr,th,td{
+            text-align: center;
+        }
+        tr:nth-child(even){
+            background-color: #eeeeee;
+        }
+        thead{
+            color: white;
+            background-color: black;
+        }
+        caption{
+            font-size: 25px;
+            font-weight: bolder;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <table frame="box" rules="all" cellpadding="5px">
+        <caption>Products List</caption>
+        <thead>
+            <th>Category</th>
+            <th>Products</th>
+            <th>Name</th>
+            <th>Price in &#8377;</th>
+            <th>Image</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="4">Electronics</th>
+                <th rowspan="2">Laptops</th>
+                <td>Apple Macbook Air M1</td>
+                <td>89,990</td>
+                <td><img src="images/macbook-air.jpg" alt="macbook-air"></td>
+                <td>Details Edit Delete</td>
+            </tr>
+            <tr>
+                <td>Apple Macbook Pro</td>
+                <td>1,19,990</td>
+                <td><img src="images/macbook-pro.jpg" alt="macbook-pro"></td>
+                <td>Details Edit Delete</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Mobiles</th>
+                <td>realme C53 (Champion Gold, 64 GB)</td>
+                <td>10,999</td>
+                <td><img src="images/realme.jpg" alt="realme C53"></td>
+                <td>Details Edit Delete</td>
+            </tr>
+            <tr>
+                <td>SAMSUNG Galaxy S23 Ultra 5G (Green, 256 GB)</td>
+                <td>1,24,999</td>
+                <td><img src="images/samsung.jpg" alt="samsung s23 ultra"></td>
+                <td>Details Edit Delete</td>
+            </tr>
+            <tr>
+                <th rowspan="4">Fashion</th>
+                <th rowspan="2">Mens</th>
+                <td>Men Slim Fit Solid Mandarin Casual Shirt</td>
+                <td>330</td>
+                <td><img src="./images/mens-mandrin-shirt.jpg" alt="mens-mandrin-shirt"></td>
+                <td>Details Edit Delete</td>
+            </tr>
+            <tr>
+                <td>Men Regular Fit Geometric Print Casual Shirt</td>
+                <td>279</td>
+                <td><img src="./images/mens-gemoetric-shirt.jpg" alt="mens Geometric shaped shirt"></td>
+                <td>Details Edit Delete</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Women</th>
+                <td>Women Colorblock Polo Neck Cotton Blend Black T-Shirt</td>
+                <td>180</td>
+                <td><img src="./images/womens-tshirt.jpg" alt="womens black tshirt"></td>
+                <td>Details Edit Delete</td>
+            </tr>
+            <tr>
+                <td>Women Pink Hand-held Bag</td>
+                <td>263</td>
+                <td><img src="./images/womens-handbag.jpg" alt="womens handbag"></td>
+                <td>Details Edit Delete</td>
+            </tr>
+        </tbody>
+
+    </table>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

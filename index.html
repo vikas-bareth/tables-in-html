@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+           
+        }
+        table{
+            width: 70vw;
+            
+        }
+       
+        img{
+            width: 50px;
+            transition: 250ms;
+            border-radius: 5px;
+            padding: 1px;
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+        tr,th,td{
+            text-align: center;
+        }
+        tr:nth-child(even){
+            background-color: #eeeeee;
+        }
+        thead{
+            color: white;
+            background-color: black;
+        }
+        caption{
+            font-size: 25px;
+            font-weight: bolder;
+            margin: 10px;
+        }
+        a{
+            color: black;
+            margin: 0px 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <table frame="box" rules="all" cellpadding="5px">
+        <caption>Products List</caption>
+        <thead>
+            <th>Category</th>
+            <th>Products</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Availability</th>
+            <th>Action</th>
+            <th>Price in &#8377;</th>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="4">Electronics</th>
+                <th rowspan="2">Laptops</th>
+                <td>Apple Macbook Air M1</td>
+                <td><img src="images/macbook-air.jpg" alt="macbook-air"></td>
+                <td><span class="bi bi-check"></span></td>
+                <td>
+                    <a class="user-action" href="#"><span class="bi bi-eye-fill"></span></a>
+                    <a href="#"><span class="bi bi-pen-fill"></span> </a>
+                    <a href="#"><span class="bi bi-trash-fill"></span></a> 
+                </td>
+                <td>89,990</td>  
+            </tr>
+            <tr>
+                <td>Apple Macbook Pro</td>
+                <td><img src="images/macbook-pro.jpg" alt="macbook-pro"></td>
+                <td><span class="bi bi-dash"></span></td>
+                <td>
+                    <a class="user-action" href="#"><span class="bi bi-eye-fill"></span></a>
+                    <a href="#"><span class="bi bi-pen-fill"></span> </a>
+                    <a href="#"><span class="bi bi-trash-fill"></span></a> 
+                </td>
+                <td>1,19,990</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Mobiles</th>
+                <td>realme C53 (Champion Gold, 64 GB)</td>
+                <td><img src="images/realme.jpg" alt="realme C53"></td>
+                <td><span class="bi bi-check"></span></td>
+                <td>
+                    <a class="user-action" href="#"><span class="bi bi-eye-fill"></span></a>
+                    <a href="#"><span class="bi bi-pen-fill"></span> </a>
+                    <a href="#"><span class="bi bi-trash-fill"></span></a> 
+                </td>
+                <td>10,999</td>
+            </tr>
+            <tr>
+                <td>SAMSUNG Galaxy S23 Ultra 5G (Green, 256 GB)</td>
+                <td><img src="images/samsung.jpg" alt="samsung s23 ultra"></td>
+                <td><span class="bi bi-check"></span></td>
+                <td>
+                    <a class="user-action" href="#"><span class="bi bi-eye-fill"></span></a>
+                    <a href="#"><span class="bi bi-pen-fill"></span> </a>
+                    <a href="#"><span class="bi bi-trash-fill"></span></a> 
+                </td>
+                <td>1,24,999</td>
+            </tr>
+            <tr>
+                <th rowspan="4">Fashion</th>
+                <th rowspan="2">Mens</th>
+                <td>Men Slim Fit Solid Mandarin Casual Shirt</td>
+                <td><img src="./images/mens-mandrin-shirt.jpg" alt="mens-mandrin-shirt"></td>
+                <td><span class="bi bi-dash"></span></td>
+                <td>
+                    <a class="user-action" href="#"><span class="bi bi-eye-fill"></span></a>
+                    <a href="#"><span class="bi bi-pen-fill"></span> </a>
+                    <a href="#"><span class="bi bi-trash-fill"></span></a> 
+                </td>
+                <td>330</td>
+            </tr>
+            <tr>
+                <td>Men Regular Fit Geometric Print Casual Shirt</td>
+                <td><img src="./images/mens-gemoetric-shirt.jpg" alt="mens Geometric shaped shirt"></td>
+                <td><span class="bi bi-check"></span></td>
+                <td>
+                    <a class="user-action" href="#"><span class="bi bi-eye-fill"></span></a>
+                    <a href="#"><span class="bi bi-pen-fill"></span> </a>
+                    <a href="#"><span class="bi bi-trash-fill"></span></a> 
+                </td>
+                <td>279</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Women</th>
+                <td>Women Colorblock Polo Neck Cotton Blend Black T-Shirt</td>
+                <td><img src="./images/womens-tshirt.jpg" alt="womens black tshirt"></td>
+                <td><span class="bi bi-check"></span></td>
+                <td>
+                    <a class="user-action" href="#"><span class="bi bi-eye-fill"></span></a>
+                    <a href="#"><span class="bi bi-pen-fill"></span> </a>
+                    <a href="#"><span class="bi bi-trash-fill"></span></a> 
+                </td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <td>Women Pink Hand-held Bag</td>
+                <td><img src="./images/womens-handbag.jpg" alt="womens handbag"></td>
+                <td><span class="bi bi-check"></span></td>
+                <td>
+                    <a class="user-action" href="#"><span class="bi bi-eye-fill"></span></a>
+                    <a href="#"><span class="bi bi-pen-fill"></span> </a>
+                    <a href="#"><span class="bi bi-trash-fill"></span></a> 
+                </td>
+                <td>263</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+              <th scope="row" colspan="6">Totals</th>
+              <th>&#8377;3,47,030</th>
+            </tr>
+          </tfoot>
+    </table>
+</body>
+</html>
